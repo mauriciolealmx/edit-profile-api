@@ -1,9 +1,6 @@
-import express from 'express';
-let router = express.Router();
+/* GET users. */
+let users = (req, res) => {
+  return res.send('respond with a resource');
+}
 
-/* GET users listing. */
-router.get('/', (req, res, next) => {
-  res.send('respond with a resource');
-});
-
-module.exports = router;
+export { users };
