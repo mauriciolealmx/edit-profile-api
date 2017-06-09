@@ -5,9 +5,6 @@ import logger from 'morgan';
 import cookieParser from 'cookie-parser';
 import bodyParser from 'body-parser';
 
-import index from './routes/index';
-import users from './routes/users';
-
 let app = express();
 app.set('port', (process.env.PORT || 5000));
 
