@@ -1,5 +1,5 @@
 import { index } from './index';
-import { users } from './users';
+import { getMailConfig } from './mail-config';
 
 module.exports = (app, express) => {
   let router = express.Router();
@@ -12,9 +12,9 @@ module.exports = (app, express) => {
   app.get('/', (req, res) => index(req, res));
 
   /**
-  *  Handling: Users
+  *  Handling: mailConfig
   *  method: GET
-  *  uri: '/users'
+  *  uri: '/mailConfig'
   */
-  app.get('/users', (req, res) => users(req, res));
+  app.get('/mailConfig', (req, res) => getMailConfig(req, res));
 };
